@@ -1,0 +1,63 @@
+﻿<Window x:Class="MProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MProject"
+        mc:Ignorable="d"
+        WindowState="Maximized"
+        ResizeMode="NoResize"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+
+        <Grid
+            Grid.Row="0"
+            Background="Aqua">
+            
+            <StackPanel Orientation="Horizontal">
+                <Label
+                    Content="Width: "
+                    Margin="10"
+                    VerticalAlignment="Center"/>
+
+                <TextBox
+                    Name="WidthTextBox"
+                    MinWidth="50"
+                    Margin="10"
+                    VerticalAlignment="Center"
+                    Text="{Binding GridWidth, Mode=TwoWay}"/>
+
+                <Label
+                    Content="Height: "
+                    Margin="10"
+                    VerticalAlignment="Center"/>
+
+                <TextBox
+                    Name="HeightTextBox"
+                    MinWidth="50"
+                    Margin="10"
+                    VerticalAlignment="Center"
+                    Text="{Binding GridHeight, Mode=TwoWay}"/>
+
+                <Button
+                    Name="SetWidthHeightButton"
+                    Content="Set"
+                    Margin="10"
+                    VerticalAlignment="Center" Click="SetWidthHeightButton_Click"/>
+            </StackPanel>
+
+        </Grid>
+
+            <Grid
+            Grid.Row="1"
+            Background="Coral"
+            Name="Warehouse"
+        />
+
+    </Grid>
+</Window>
